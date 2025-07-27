@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>supQ</title>
+  <link rel="icon" href="icon.ico" type="image/x-icon" />
   <style>
     body {
       margin: 0;
@@ -15,30 +16,30 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: 100dvh;
       text-align: center;
       overflow: hidden;
+      gap: 30px;
     }
 
     img {
-      max-width: 900px;
-      max-height: none;
+      width: 95vw;
+      max-width: 1200px;
+      height: auto;
       border-radius: 10px;
       box-shadow: 0 0 25px rgba(200, 160, 255, 0.6);
-      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
+      font-size: 2.5rem;
       text-shadow: 0 0 10px rgba(200, 160, 255, 0.7);
       z-index: 2;
     }
 
     a.button {
       text-decoration: none;
-      padding: 12px 24px;
-      font-size: 1.1rem;
+      padding: 16px 36px;
+      font-size: 1.4rem;
       color: #d8bfd8;
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid #d8bfd8;
@@ -79,7 +80,7 @@
 </head>
 <body>
   <img src="banner.png" alt="supQ Banner" />
-  <h1>SUPQ, CREATED BY SUPQUARTER AND RUN BY THE EXPLOITING COMMUNITY.</h1>
+  <h1>supQ, created by supquarter and run by the exploiting community</h1>
   <a class="button" href="https://guns.lol/supquarter" target="_blank">guns.lol</a>
 
   <script>
@@ -99,14 +100,12 @@
       });
     }
 
-    // Start with fast snow
-    let isFastSnow = true;
+    // Start fast snow
     const fastSnowInterval = setInterval(() => createSnowflake(true), 100);
 
-    // Switch to slower snow after 5 seconds
+    // Switch to slow snow after 5 seconds
     setTimeout(() => {
       clearInterval(fastSnowInterval);
-      isFastSnow = false;
       setInterval(() => createSnowflake(false), 300);
     }, 5000);
   </script>
